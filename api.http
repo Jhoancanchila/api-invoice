@@ -1,0 +1,38 @@
+###recuperar los clientes
+GET http://localhost:3001/client
+
+###recuperar los productos
+GET http://localhost:3001/product
+
+###recuperar todas las facturas
+GET http://localhost:3001/invoice
+
+###recuperar facturas por cliente
+GET http://localhost:3001/invoice/2
+
+###crear una factura
+
+POST http://localhost:3001/invoice
+content-type: application/json
+
+{
+    "client": 2,
+    "date": "2024-04-05",
+    "subtotal": 200,
+    "discount": 10,
+    "total": 400
+}
+
+###recuperar relación de clientes por factura
+GET http://localhost:3001/invoice-product/2
+
+###crear nuevo cliente a factura en especifico
+
+POST http://localhost:3001/invoice-product
+content-type: application/json
+
+{
+    "invoice": 4,
+    "product": 344,
+    "quantity": 2
+}
