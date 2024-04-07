@@ -1,5 +1,13 @@
 const z = require("zod");
 
+
+const productSchema = z.object({
+  id: z.number().int().positive(),
+  name: z.string(),
+  price: z.number().int().positive(),
+  quantity: z.number().int().positive(),
+ });
+
 const invoiceSchema = z.object({
   client: z.number().int().positive(),
   date: z.string({
@@ -8,7 +16,8 @@ const invoiceSchema = z.object({
   }),
   subtotal: z.number().int().positive(),
   discount: z.number().int().positive(),
-  total: z.number().int().positive()
+  total: z.number().int().positive(),
+  products: z.array(productSchema)
 })
 
 //validar factura safeparse devuelve un objeto indicando si hay error o no
