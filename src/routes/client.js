@@ -6,6 +6,7 @@ function client(app) {
   app.use('/client', router);
 
   router.get("/", clientController.getAllClients)
+  router.get("/:id", clientController.getClient)
 }
 
 module.exports = client;

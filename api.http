@@ -1,6 +1,9 @@
 ###recuperar los clientes
 GET http://localhost:3001/client
 
+###recuperar cliente
+GET http://localhost:3001/client/1
+
 ###recuperar los productos
 GET http://localhost:3001/product
 
