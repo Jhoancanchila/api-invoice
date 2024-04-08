@@ -39,3 +39,21 @@ content-type: application/json
     "product": 344,
     "quantity": 2
 }
+###crear nuevo usuario
+
+POST http://localhost:3001/auth/register
+content-type: application/json
+
+{
+"email": "jcanchila@gmail.com",
+"password": "yairpuerta53"
+}
+###login
+
+POST http://localhost:3001/auth/sign-in
+content-type: application/json
+
+{
+"username": "jcanchila@gmail.com",
+"password": "yairpuerta53"
+}
