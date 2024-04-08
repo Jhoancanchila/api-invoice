@@ -45,8 +45,8 @@ POST http://localhost:3001/auth/register
 content-type: application/json
 
 {
-"email": "jcanchila@gmail.com",
-"password": "yairpuerta53"
+"email": "chad@flow.com",
+"password": "Flow23Chad"
 }
 ###login
 

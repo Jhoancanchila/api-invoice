@@ -9,7 +9,7 @@ const createUser = async({ user }) => {
   const hashedPassword = await bcrypt.hash(user.password, 10);
   const [ userCreated ] = await db.query(`INSERT INTO user
   (email, pass, role_id)
-  VALUES('${user.email}', '${hashedPassword}', ${1})`);
+  VALUES('${user.email}', '${hashedPassword}', ${2})`);
   return userCreated;
 }
 

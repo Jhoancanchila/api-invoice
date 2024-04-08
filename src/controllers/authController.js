@@ -10,9 +10,9 @@ const validateUser = async(req, res, next) => {
       if(!user) return res.status(400).json(info);
       const token = jwt.sign(user,config.authJwtSecret,{ expiresIn: "1h" });
 
-      const { id, email, role_id } = user;
+      const { id, email, role_id, client_id } = user;
 
-      return res.status(200).json({ token, user: { id, email,role_id } });
+      return res.status(200).json({ token, user: { id, email,role_id, client_id } });
 
     })( req, res, next );
     
