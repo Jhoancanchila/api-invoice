@@ -22,7 +22,7 @@ content-type: application/json
     "client": 2,
     "date": "2024-04-05",
     "subtotal": 200,
-    "discount": 10,
+    "discount": 0,
     "total": 400
 }
 
