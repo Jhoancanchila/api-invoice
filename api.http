@@ -22,7 +22,7 @@ content-type: application/json
     "client": 2,
     "date": "2024-04-05",
     "subtotal": 200,
-    "discount": 10,
+    "discount": 0,
     "total": 400
 }
 
@@ -38,4 +38,22 @@ content-type: application/json
     "invoice": 4,
     "product": 344,
     "quantity": 2
+}
+###crear nuevo usuario
+
+POST http://localhost:3001/auth/register
+content-type: application/json
+
+{
+"email": "chad@flow.com",
+"password": "Flow23Chad"
+}
+###login
+
+POST http://localhost:3001/auth/sign-in
+content-type: application/json
+
+{
+"username": "jcanchila@gmail.com",
+"password": "yairpuerta53"
 }

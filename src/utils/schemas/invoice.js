@@ -14,9 +14,9 @@ const invoiceSchema = z.object({
     invalid_type_error: 'Invoice date must be a string',
     required_error: 'Invoice date is required.'
   }),
-  subtotal: z.number().int().positive(),
-  discount: z.number().int().positive(),
-  total: z.number().int().positive(),
+  subtotal: z.number(),
+  discount: z.number(),
+  total: z.number(),
   products: z.array(productSchema)
 })
 
