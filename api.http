@@ -45,8 +45,8 @@ POST http://localhost:3001/auth/register
 content-type: application/json
 
 {
-"email": "chad@flow.com",
-"password": "Flow23Chad"
+"email": "dave@virtues.com",
+"password": "Virtues23Dave"
 }
 ###login
 
@@ -54,6 +54,6 @@ POST http://localhost:3001/auth/sign-in
 content-type: application/json
 
 {
-"username": "jcanchila@gmail.com",
-"password": "yairpuerta53"
+"username": "dave@virtues.com",
+"password": "Virtues23Dave"
 }

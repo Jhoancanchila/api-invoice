@@ -3,6 +3,7 @@ const cors = require("cors");
 const invoice = require("./src/routes/invoice");
 const client = require("./src/routes/client");
 const product = require("./src/routes/product");
+const uploadVoucher = require("./src/routes/upload-image");
 const invoiceProduct = require("./src/routes/invoice-product");
 const auth = require("./src/routes/auth");
 const { config } = require("./src/config/config");
@@ -27,6 +28,7 @@ product(app);
 client(app);
 invoiceProduct(app);
 auth(app);
+uploadVoucher(app);
 
 app.listen(PORT, ()=> {
   console.log(`Server listening in port http://localhost:${PORT}`)
