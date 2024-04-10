@@ -3,7 +3,7 @@ const invoiceProductController = require('../controllers/invoiceProductControlle
 
 function invoiceProduct(app) {
   const router = express.Router();
-  app.use('/invoice-product', router);
+  app.use('/api/invoice-product', router);
 
   router.get("/:invoiceId", invoiceProductController.getAllInvoiceProduct);
 
