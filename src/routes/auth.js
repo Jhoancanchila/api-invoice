@@ -4,7 +4,7 @@ const authController = require('../controllers/authController');
 
 function auth(app) {
   const router = express.Router();
-  app.use('/auth', router);
+  app.use('/api/auth', router);
 
   router.post("/sign-in", authController.validateUser);
 

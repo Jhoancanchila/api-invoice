@@ -12,7 +12,7 @@ const create = async( data ) => {
   const { client, date, subtotal, discount, total, products } = data;
 
   try {    
-    const [ response ] = await db.query(`INSERT INTO INVOICE
+    const [ response ] = await db.query(`INSERT INTO invoice
     (client_id, created_date, subtotal, discount, total)
     VALUES(${client}, str_to_date('${date}', '%Y-%m-%d'), ${subtotal}, ${discount}, ${total})`);
   

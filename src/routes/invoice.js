@@ -4,7 +4,7 @@ const { authorized } = require('../auth/middleware/auth');
 
 function invoice(app) {
   const router = express.Router();
-  app.use('/invoice', router);
+  app.use('/api/invoices', router);
 
   router.get("/", authorized, invoiceController.getAllInvoices);
 

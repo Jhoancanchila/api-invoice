@@ -9,7 +9,7 @@ var upload = multer({ storage: storage });
 
 function uploadVoucher(app) {
   const router = express.Router();
-  app.use('/upload-image', upload.array("image"), router);
+  app.use('/api/upload-image', upload.array("image"), router);
 
   router.post("/",  uploadController.sendUpload);
 
