@@ -1,11 +1,12 @@
 const express = require('express');
 const invoiceController = require('../controllers/invoiceController');
+const { authorized } = require('../auth/middleware/auth');
 
 function invoice(app) {
   const router = express.Router();
-  app.use('/invoice', router);
+  app.use('/api/invoices', router);
 
-  router.get("/", invoiceController.getAllInvoices);
+  router.get("/", authorized, invoiceController.getAllInvoices);
 
   router.get("/:idClient", invoiceController.getInvoicesByClient);
 
